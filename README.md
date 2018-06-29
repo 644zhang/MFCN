@@ -1,7 +1,6 @@
 # MFCN
 This code is for the paper "A unified deep-learning network to accurately segment insulin granules of different animal models imaged under different electron microscopy methodologies "
 
-TECHNICAL BACKGROUND
 STEP 1: Image histogram equalization.
 The histogram equalization can be implemented with the Matlab built-in function, e.g.,:
 img = imread('train1.tiff');
