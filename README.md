@@ -14,3 +14,5 @@ Once we have trained the model, we can use the trained model to segment new imag
 
 STEP 3: Watershed based instance segmentation.
 After obtaining binary segmentation maps, to record information for each vesicle, e.g., area, radius, and gray-value, we adopt a watershed-based instance segmentation and save each vesicle’s contour as .roi files, which can be read by ImageJ software. We provide Matlab scripts (in ./code_model/matlab_script), first running watershed_for_dbwts.m to record information for each vesicle, and then running freeroisaveapply.m to save the .roi files. These .roi files can be read and analyzed by ImageJ software.
+
+If you need the dataset or have any questions, please contact with 644364381@qq.com
