@@ -1,0 +1,27 @@
+net: "/home/zxy/dbwt/wd.prototxt" #
+test_iter:30
+# make test net, but don't invoke it from the solver itself
+test_interval: 200
+display: 20
+lr_policy: "multistep"
+# lr for unnormalized softmax -- see train_val definition
+base_lr: 0.001
+# high momentum
+momentum: 0.0
+# no gradient accumulation
+stepvalue: 50 
+stepvalue: 800
+stepvalue: 1500
+stepvalue: 5000  
+stepvalue: 15000
+stepvalue: 50000
+gamma: 0.5
+power: 0.75
+stepsize: 2000
+max_iter: 60000
+solver_type: SGD
+weight_decay: 0.0001
+snapshot: 5000
+snapshot_prefix: "/home/zxy/caffemodelsave/dwu_"
+
+
