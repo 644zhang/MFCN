@@ -1,13 +1,15 @@
 # MFCN
 This code is for the paper "A unified deep-learning network to accurately segment insulin granules of different animal models imaged under different electron microscopy methodologies "
-----
+--
 
 STEP 1: Image histogram equalization.
+-
 The histogram equalization can be implemented with the Matlab built-in function, e.g.,:
 img = imread('train1.tiff');
 J = histeq(img);
 
 STEP 2: MFCN binary segmentation.
+-
 We provide a MFCN implement of the Caffe version, saved as code_model.zip, containing the MFCN model (in./code_model/caffeprototxt/), our trained modelweight file (in./code_model/modelweight/), some python scripts (in ./code_model/python_script/) and Matlab scripts(in ./code_model/matlab_script/) for model training and post-processing. However, the MFCN model realized by other deep-learning frameworks, such as TensorFlow, PyTorch, MXNet also works well. For this version, we randomly crop and save the image sets and the corresponding binary label sets as an .h5 file. The model training depended on two prototxt scripts: wd.prototxt (for MFCN model description) and solverdbwt.prototxt (for training strategy description). We can enter the Caffe installation directory and input the command line to train these models, such as: ./build/tools/caffe train -gpu 0 --solver=/home/zxy/caffeprototxt/solver.prototxt
 More examples can be seen in http://caffe.berkeleyvision.org/gathered/examples/imagenet.html. 
 In this experiment, we train the model from scratch. In effect, users can finetune their own model with our trained model (./code_model/modelweight/dwu__iter_60000.caffemodel), which can improve the training speed significantly.
