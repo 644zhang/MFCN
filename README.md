@@ -1,4 +1,3 @@
-# MFCN
 This code is for the paper "A unified deep-learning network to accurately segment insulin granules of different animal models imaged under different electron microscopy methodologies "<br>
 --
 
